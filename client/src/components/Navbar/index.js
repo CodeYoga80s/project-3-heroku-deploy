@@ -38,7 +38,7 @@ function Navbar({ authUser }){
               to="/favorites"
               className={window.location.pathname === "/favorites" ? "nav-link active navbar-brand" : "nav-link navbar-brand"}
             >
-              favorites
+              Favorites
             </Link>
           </li>
         </ul>
