@@ -19,7 +19,7 @@ app.use(routes);
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/likedcocktails");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_nrjkc7n5:hfkq2sfae02ad9tvvpj9afv6sm@ds113845.mlab.com:13845/heroku_nrjkc7n5");
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
