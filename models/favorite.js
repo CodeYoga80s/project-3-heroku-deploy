@@ -5,6 +5,6 @@ const favoriteSchema = new Schema({
   cocktailID: { type: Number, required: true }
 });
 
-const Favorite = mongoose.model("Favorite", favoriteSchema);
+const favorite = mongoose.model("favorite", favoriteSchema);
 
-module.exports = Favorite;
+module.exports = favorite;

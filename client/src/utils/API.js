@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
 //add to favorites 
-  saveFavorite: function(id) {
+  savefavorite: function(id) {
     return axios.post("/api/favorites", id);
   },
 //add user

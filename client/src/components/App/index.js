@@ -12,7 +12,7 @@ import SignInPage from '../SignIn';
 import * as ROUTES from '../../constants/routes';
 import { withFirebase } from '../Firebase';
 import SearchResults from '../SearchResults';
-import Favorite from '../Favorite'
+import favorite from '../favorite'
 import Navbar from '../Navbar'
 
 class App extends Component {
@@ -47,7 +47,7 @@ class App extends Component {
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
       <Route authUser={this.state.authUser} exact path="/search-results/:id" component={SearchResults} />
-      <Route authUser={this.state.authUser} exact path="/favorites" component={Favorite} />
+      <Route authUser={this.state.authUser} exact path="/favorites" component={favorite} />
     </div>
   </Router>
     );

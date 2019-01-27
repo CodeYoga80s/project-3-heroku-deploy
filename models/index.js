@@ -1,4 +1,4 @@
 module.exports = {
-    Favorite: require("./Favorite"),
+    favorite: require("./favorite"),
     User: require("./User")
   };

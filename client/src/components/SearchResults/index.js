@@ -10,7 +10,7 @@ import firebase from 'firebase';
 import SignIn from "../SignIn";
 import Modal from 'react-awesome-modal';
 
-import Favorite from "../Favorite"
+import favorite from "../favorite"
 import './style.css'
 
 class SearchResults extends Component {
@@ -192,7 +192,7 @@ class SearchResults extends Component {
                 <li>{detail.strMeasure14}{detail.strIngredient14}</li>
                 <li>{detail.strMeasure15}{detail.strIngredient15}</li>
               </ul>
-              <button type="submit" value = {detail.idDrink} onClick={this.addTofavorites}>Add To Favorites</button>
+              <button type="submit" value = {detail.idDrink} onClick={this.addTofavorites}>Add To favorites</button>
             </div>
           ))}
         </div>
