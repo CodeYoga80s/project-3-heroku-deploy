@@ -112,6 +112,7 @@ class SearchResults extends Component {
   }
 
   addTofavorites = event => {
+    
     console.log("Adding to favorites" , event.target.value);
     this.checkUser();
     if(this.state.userID){
@@ -122,7 +123,7 @@ class SearchResults extends Component {
       this.openModal();
 
     }
-  
+  this.closeDetailModal();
   };
 
   openModal = () => {

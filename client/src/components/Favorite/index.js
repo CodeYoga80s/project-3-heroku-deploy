@@ -9,7 +9,7 @@ import Card from "../Card";
 import firebase from 'firebase';
 import SignIn from "../SignIn";
 import Modal from 'react-awesome-modal';
-
+import './style.css'
 {/*image: "",*/}
 {/*, title: res.data.drinks.strDrink, image: res.data.drinks.strDrinkThumb, idDrink: res.data.drinks.idDrink*/}
 {/*{title: res.data.drinks[0].strDrink, image: res.data.drinks[0].strDrinkThumb}*/}
@@ -206,34 +206,35 @@ displayDrinkById = event => {
         
         <div className="container">
 
-       <Modal visible={this.state.isModalOpen} width="400" height="400" effect="fadeInUp" onClickAway={() => this.closeModal()}><SignIn ></SignIn> </Modal> 
-       <Modal className="detail-modal" visible={this.state.isDetailModalOpen} width="400" height="0" effect="fadeInUp" onClickAway={() => this.closeDetailModal()}> 
+        <Modal className="sign-in-modal" visible={this.state.isModalOpen} width="400" height="400" effect="fadeInUp" onClickAway={() => this.closeModal()}><SignIn ></SignIn> </Modal> 
+
+<Modal className="detail-modal" visible={this.state.isDetailModalOpen} width="600" height="0" effect="fadeInUp" onClickAway={() => this.closeDetailModal()}> 
         <div  className="modal-content">
           {this.state.details.map(detail => (
-            <div>
-              <img className="recipe-thumb" src={detail.strDrinkThumb} alt={detail.strDrink}/>
-              <h1>{detail.strDrink}</h1>
-              <p><b>Alcoholic/Non-Alcoholic: </b>{detail.strAlcoholic}</p>
-              <p><b>Glass: </b>{detail.strGlass}</p>
-              <p><b>Instructions: </b>{detail.strInstructions}</p>
-              <p><b>Ingredients: </b></p>
-              <ul>
-                <li>{detail.strMeasure1}{detail.strIngredient1}</li>
-                <li>{detail.strMeasure2}{detail.strIngredient2}</li>
-                <li>{detail.strMeasure3}{detail.strIngredient3}</li>
-                <li>{detail.strMeasure4}{detail.strIngredient4}</li>
-                <li>{detail.strMeasure5}{detail.strIngredient5}</li>
-                <li>{detail.strMeasure6}{detail.strIngredient6}</li>
-                <li>{detail.strMeasure7}{detail.strIngredient7}</li>
-                <li>{detail.strMeasure8}{detail.strIngredient8}</li>
-                <li>{detail.strMeasure9}{detail.strIngredient9}</li>
-                <li>{detail.strMeasure10}{detail.strIngredient10}</li>
-                <li>{detail.strMeasure11}{detail.strIngredient11}</li>
-                <li>{detail.strMeasure12}{detail.strIngredient12}</li>
-                <li>{detail.strMeasure13}{detail.strIngredient13}</li>
-                <li>{detail.strMeasure14}{detail.strIngredient14}</li>
-                <li>{detail.strMeasure15}{detail.strIngredient15}</li>
-              </ul>
+            <div className="modal-position">
+            <img className="recipe-thumb .d-md-none .d-lg-block" src={detail.strDrinkThumb} alt={detail.strDrink}/>
+            <h2>{detail.strDrink}</h2>
+            <p className="p-details">{detail.strAlcoholic}</p>
+            <p className="p-details"><b>Glass: </b>{detail.strGlass}</p>
+            <p className="p-details"><b>Instructions: </b>{detail.strInstructions}</p>
+            <p className="p-details"><b>Ingredients: </b></p>
+            <ul>
+              <li>{detail.strMeasure1}{detail.strIngredient1}</li>
+              <li>{detail.strMeasure2}{detail.strIngredient2}</li>
+              <li>{detail.strMeasure3}{detail.strIngredient3}</li>
+              <li>{detail.strMeasure4}{detail.strIngredient4}</li>
+              <li>{detail.strMeasure5}{detail.strIngredient5}</li>
+              <li>{detail.strMeasure6}{detail.strIngredient6}</li>
+              <li>{detail.strMeasure7}{detail.strIngredient7}</li>
+              <li>{detail.strMeasure8}{detail.strIngredient8}</li>
+              <li>{detail.strMeasure9}{detail.strIngredient9}</li>
+              <li>{detail.strMeasure10}{detail.strIngredient10}</li>
+              <li>{detail.strMeasure11}{detail.strIngredient11}</li>
+              <li>{detail.strMeasure12}{detail.strIngredient12}</li>
+              <li>{detail.strMeasure13}{detail.strIngredient13}</li>
+              <li>{detail.strMeasure14}{detail.strIngredient14}</li>
+              <li>{detail.strMeasure15}{detail.strIngredient15}</li>
+            </ul>
 
             </div>
           ))}
