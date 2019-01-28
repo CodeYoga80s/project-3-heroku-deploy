@@ -35,6 +35,8 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   updateFav: function(req, res) {
+    console.log("Reached controller ");
+    console.log(req.body.cocktailID);
     db.User
       .findOneAndUpdate({_id: req.params.id},{$addToSet : { favorites: req.body.cocktailID }}, { new: true })
       .then(dbModel => res.json(dbModel))
