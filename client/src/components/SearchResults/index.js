@@ -112,10 +112,10 @@ class SearchResults extends Component {
   }
 
   addTofavorites = event => {
+    console.log("Adding to favorites" , event.target.value);
     this.checkUser();
     if(this.state.userID){
-    console.log(event);
-    API.updateUser(this.state.userID,{cocktailID: event})
+    API.updateUser(this.state.userID,{cocktailID: event.target.value})
     .then(res => console.log(res))
     .catch(err => console.log(err)); }
     else{

@@ -89,7 +89,7 @@ class SignUpFormBase extends Component {
       <form onSubmit={this.onSubmit}>
 
       <FormGroup controlId="username" bsSize="large">
-        <ControlLabel>Email</ControlLabel>
+        <ControlLabel>Name</ControlLabel>
         <br></br>
         <input
           name="username"
@@ -100,7 +100,7 @@ class SignUpFormBase extends Component {
         />
         </FormGroup>
         <FormGroup controlId="email" bsSize="large">
-          <ControlLabel>Password</ControlLabel>
+          <ControlLabel>Email</ControlLabel>
           <br></br>
           <input
             name="email"
