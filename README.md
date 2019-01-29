@@ -15,8 +15,8 @@ Imbibe is deployed to Heroku. Please check it out <a href="https://mighty-shelf-
 <h2>Installation</h2>
 To install the application follow the instructions below:
 <ol>
-    <li>git clone git@github.com:CodeYoga80s/project3-fun-project.git</li>
-    <li>cd project3-fun-project</li>
+    <li>git clone git@github.com:CodeYoga80s/project-3-heroku-deploy.git</li>
+    <li>cd project-3-heroku-deploy</li>
     <li>npm install</li>
 
 <h2>Run Locally</h2>
